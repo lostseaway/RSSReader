@@ -14,12 +14,12 @@ import model.RSS;
 
 public class RSSReader {
 
-	public RSS getRSS() throws MalformedURLException {
+	public RSS getRSS(String surl) throws MalformedURLException {
 
 		try {
 			JAXBContext ctx = JAXBContext.newInstance(RSS.class);
 			Unmarshaller unmarshaller = ctx.createUnmarshaller();
-			URL url = new URL("http://feeds.bbci.co.uk/news/rss.xml");
+			URL url = new URL(surl);
 			Object obj = unmarshaller.unmarshal( url );
 			RSS rss = (RSS) obj;
 			return rss;
@@ -31,7 +31,7 @@ public class RSSReader {
 
 	// Test JAXB
 	public static void main(String[] args) throws MalformedURLException {
-		RSS rss = (new RSSReader()).getRSS();
+		RSS rss = (new RSSReader()).getRSS("http://feeds.bbci.co.uk/news/rss.xml");
 		System.out.println(rss.getChannel());
 		List<Item> items = rss.getChannel().getItems();
 		for(int i = 0;i< items.size();i++){
