@@ -4,28 +4,36 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
 @XmlAccessorType (XmlAccessType.FIELD)
+
+/**
+ * Item data model of rss element.
+ * 
+ * @author Sarun Wongtanakarn 5510546166
+ *
+ */
 public class Item {
 	
 	private String title;
-	private String description;
 	private String link;
+	private String description;
+	private String author;
+	private String category;
+	private String comments;
+	private String enclosure;
 	private String guid;
 	private String pubDate;
+	private String source;
 	
 	public Item() {
 		
 	}
-	
+
 	public String getTitle() {
 		return title;
 	}
-	
-	public String getDescription() {
-		return description;
-	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getLink() {
@@ -34,6 +42,46 @@ public class Item {
 
 	public void setLink(String link) {
 		this.link = link;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public String getComments() {
+		return comments;
+	}
+
+	public void setComments(String comments) {
+		this.comments = comments;
+	}
+
+	public String getEnclosure() {
+		return enclosure;
+	}
+
+	public void setEnclosure(String enclosure) {
+		this.enclosure = enclosure;
 	}
 
 	public String getGuid() {
@@ -52,12 +100,12 @@ public class Item {
 		this.pubDate = pubDate;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public String getSource() {
+		return source;
 	}
-	
-	public String toString(){
-		return getTitle()+" : "+this.getDescription();
+
+	public void setSource(String source) {
+		this.source = source;
 	}
 
 }

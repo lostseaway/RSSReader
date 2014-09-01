@@ -50,6 +50,7 @@ public class RSSActivity extends JFrame implements Runnable {
 		table.getColumnModel().getColumn(1).setPreferredWidth(250);
 		
 		table.getColumnModel().getColumn(2).setPreferredWidth(250);
+		table.setRowHeight(25);
 	}
 	
 	@Override

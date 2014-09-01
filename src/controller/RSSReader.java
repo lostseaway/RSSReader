@@ -31,7 +31,7 @@ public class RSSReader {
 
 	// Test JAXB
 	public static void main(String[] args) throws MalformedURLException {
-		RSS rss = (new RSSReader()).getRSS("http://feeds.bbci.co.uk/news/rss.xml");
+		RSS rss = (new RSSReader()).getRSS("http://www.blognone.com/atom.xml");
 		System.out.println(rss.getChannel());
 		List<Item> items = rss.getChannel().getItems();
 		for(int i = 0;i< items.size();i++){
