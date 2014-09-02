@@ -10,8 +10,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * RSS data model.
- * 
- * @author Sarun Wongtanakarn 5510546166
+ *  
+ * @author Thunyathon Jaruchotrattanasakul 5510546972
  *
  */
 public class RSS {

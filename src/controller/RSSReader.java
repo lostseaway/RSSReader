@@ -11,9 +11,19 @@ import javax.xml.bind.Unmarshaller;
 
 import model.Item;
 import model.RSS;
-
+/**
+ * For reading URL convert to rss class
+ * @author Thunyathon Jaruchotrattanasakul 5510546972
+ *
+ */
 public class RSSReader {
 
+	/**
+	 * for convert url to 
+	 * @param surl
+	 * @return
+	 * @throws MalformedURLException
+	 */
 	public RSS getRSS(String surl) throws MalformedURLException {
 
 		try {
@@ -29,7 +39,7 @@ public class RSSReader {
 		return null;
 	}
 
-	// Test JAXB
+	// Test Read
 	public static void main(String[] args) throws MalformedURLException {
 		RSS rss = (new RSSReader()).getRSS("http://www.blognone.com/atom.xml");
 		System.out.println(rss.getChannel());
