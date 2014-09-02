@@ -34,6 +34,11 @@ import model.RSS;
 
 import controller.RSSReader;
 
+/**
+ * Main GUI
+ * @author Thunyathon Jaruchotrattanasakul 55105469782
+ *
+ */
 public class ListActivity extends JFrame implements Runnable {
 	
 	private RSSReader reader ;
@@ -42,7 +47,6 @@ public class ListActivity extends JFrame implements Runnable {
 	private JButton urlButton;
 	private List<Item> items;
 	private RSS rss;
-	private RSSActivity rssAct;
 	private JList list;
 	private DefaultListModel listModel;
 	private JTextArea detailLabel;

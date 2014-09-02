@@ -1,5 +1,9 @@
 package view;
-
+/**
+ * Main Class
+ * @author Thunyathon Jaruchotrattanasakul 5510546972
+ *
+ */
 public class Main {
 
 	/**
